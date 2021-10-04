@@ -1,5 +1,3 @@
-  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
-  git remote set-url origin  https://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@github.com/ljcnh/TheGoProgrammingLanguage.git
 ## struct
     只有导出的结构体成员才会被编码    导出的结构体成员：首字母大写
 
