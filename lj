@@ -1,0 +1,147 @@
+  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
+  git remote set-url origin  https://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@github.com/ljcnh/TheGoProgrammingLanguage.git
+## struct
+    只有导出的结构体成员才会被编码    导出的结构体成员：首字母大写
+
+## 练习 4.11  全部都是抄的 连看都没看 ！！！！！！！！！！！！！！！！！！
+
+## slice作为参数，如果以值的形式传递，确实可以在函数内部修改数组，但前提是，函数内部slice不会扩容，如果函数内部slice会扩容，需要传slice指针
+
+## map
+    mp := make(map[string]map[string]bool)
+    1
+	for _, value := range m {
+		for _, val := range value {
+			mp[val] = make(map[string]bool)
+		}
+	}
+    2
+		for key, value := range m {
+    		for _, val := range value {
+    			mp[val] = make(map[string]bool)
+    			mp[val][key] = true
+    			_, ok := in[val]
+    			if !ok {
+    				in[val] = 0
+    			}
+    		}
+    		in[key] = len(value)
+    	}
+    1和2存在差异   第二种初始化 只能保存一个string
+
+
+##
+    第一种是正确的  第二种是错误的
+    var rmdirs []func()
+    for _, d := range tempDirs() {
+        dir := d // NOTE: necessary!
+        os.MkdirAll(dir, 0755) // creates parent directories too
+        rmdirs = append(rmdirs, func() {
+            os.RemoveAll(dir)
+        })
+    }
+    // ...do some work…
+    for _, rmdir := range rmdirs {
+        rmdir() // clean up
+    }
+
+    var rmdirs []func()
+    for _, dir := range tempDirs() {
+        os.MkdirAll(dir, 0755)
+        rmdirs = append(rmdirs, func() {
+            os.RemoveAll(dir) // NOTE: incorrect!
+        })
+    }
+        for循环语句引入了新的词法块，循环变量dir在这个词法块中被声明
+        在该循环中生成的所有函数值都共享相同的循环变量    函数值中记录的是循环变量的内存地址，而不是循环变量某一时刻的值
+        以dir为例，后续的迭代会不断更新dir的值，当删除操作执行时，for循环已完成，dir中存储的值等于最后一次迭代的值。这意味着，每次对os.RemoveAll的调用删除的都是相同的目录
+    例子：
+    	var rmdirs []func()
+    	for _, d := range tempDirs() {
+    		dir := d
+    		fmt.Print(d, " ", &d, " ")
+    		fmt.Println(dir, &dir)
+    		rmdirs = append(rmdirs, func() {
+    			fmt.Print(d, " ", &d, " ")
+    			fmt.Println(dir, &dir)
+    		})
+    	}
+    	for _, rmdir := range rmdirs {
+    		rmdir()
+    	}
+    	// 输出
+    	//a 0xc000048230 a 0xc000048250
+    	//b 0xc000048230 b 0xc000048280
+    	//c 0xc000048230 c 0xc0000482c0
+    	//d 0xc000048230 d 0xc0000482f0
+    	//d 0xc000048230 a 0xc000048250
+    	//d 0xc000048230 b 0xc000048280
+    	//d 0xc000048230 c 0xc0000482c0
+    	//d 0xc000048230 d 0xc0000482f0
+    变量 d 的地址没有发生改变  在循环时只有值发生改变
+    变量 dir 的地址发生改变  值也在改变
+
+
+## 匿名返回值函数  非匿名返回值函数
+    func test1(x int) int {
+        res := x * 2
+        fmt.Println("test2 res:", &res)
+        defer func() {
+            if res == 4 {
+                fmt.Println("test1 res", res)
+                fmt.Println("test1 res", &res)
+                res = 1
+            } else {
+                fmt.Println("res", res)
+            }
+        }()
+        return res
+    }
+
+    func test2(x int) (res int) {
+        fmt.Println("test2 res:", &res)
+        res = x * 2
+        defer func() {
+            if res == 4 {
+                fmt.Println("test2 res:", res)
+                fmt.Println("test2 res:", &res)
+                res = 1
+            } else {
+                fmt.Println("res", res)
+            }
+        }()
+        return res
+    }
+    fmt.Println(test1(2))   返回 4
+	fmt.Println(test2(2))   返回 1
+
+    匿名返回函数（test1）
+        首先函数返回时会自动创建一个返回变量假设为ret，函数返回时要将res赋值给ret，即有ret = res，也就是说ret=4
+        然后函数结束执行defer，此时就到了res++
+        最后返回ret
+
+    非匿名返回函数（test2）
+        返回值在函数定义时以经存在，return时不需要再创建另外的变量ret，返回的ret就是res
+
+
+##
+    不应该试图去恢复其他包
+    引起的panic。公有的API应该将函数的运行失败作为error返回，而不是
+    panic。同样的，你也不应该恢复一个由他人开发的函数引起的panic
+
+##
+    type Point struct {
+    	X, Y float64
+    }
+    方法和名字不能是重名的       方法指的是 Point.Func()   (这样的  func (p Point) Distance(q Point) )
+
+##
+    约定如果Point这个类有一个指针作为接收器的方法，那么所有Point的方法都必须有一个指针接收器，即使是那些并不需要这个指针接收器的函数
+    如果一个类型名本身是一个指针的话，是不允许其出现在接收器中的
+
+    不论接收器的实际参数和其形式参数是相同，比如两者都是类型T或者都是类型 *T ：
+    或者接收器实参是类型T，但接收器形参是类型 *T ，这种情况下编译器会隐式地为我们取变量的地址：
+    或者接收器实参是类型 *T ，形参是类型T。编译器会隐式地为我们解引用，取到指针指向的实际变量：
+    总结：不管你的method的receiver是指针类型还是非指针类型，都是可以通过指针/非指针类型进行调用的，编译器会帮你做类型转换。
+
+##
