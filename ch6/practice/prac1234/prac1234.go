@@ -1,4 +1,4 @@
-package practice
+package prac1234
 
 import (
 	"bytes"
