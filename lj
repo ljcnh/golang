@@ -152,3 +152,36 @@
     在golang中，可以在需要的时候定义一个新的抽象或者特定特点的组，而不需要修改具体类型的定义
     （与c++有极大的不同）
 
+##
+    接口值可以使用＝＝和!＝来进行比较
+    两个接口值相等仅当它们都是nil值或者它们的动态类型相同并且动态值也根据这个动态类型的＝＝操作相等
+        因为接口值是可比较的，所以它们可以用在map的键或者作为switch语句的操作数
+    如果两个接口值的动态类型相同，但是这个动态类型是不可比较的（比如切片），将它们进行比较就会失败并且panic
+
+##
+    const debug = false
+    func f(out io.Writer) {
+    	if out!=nil{
+    		out.Write([]byte("done\n"))
+    	}
+    }
+    func main() {
+    	//var buf *bytes.Buffer  （1）
+    	var buf io.Writer       （2）
+    	if debug {
+    		buf = new(bytes.Buffer)
+    	}
+    	f(buf)
+    	if debug{
+    		fmt.Println(buf)
+    	}
+    }
+    debug 为false的时候，（2）不会报错
+
+    （1）报错panic  ：  f(buf) 中   if out!=nil的判断是true
+    接口值 包含：动态值和动态类型
+    在判断out!=nil的时候，判断的是动态类型
+    而在（1）中，buf的类型是bytes.Buffer 所以判断不为空
+
+##
+    可以使用导出机制(§6.6)来限制一个类型的方法或一个结构体的字段是否在包外可见。接口只有当有两个或两个以上的具体类型必须以相同的方式进行处理时才需要

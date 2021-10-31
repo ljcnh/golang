@@ -1,0 +1,4 @@
+在Set和CelsiusFlag添加个输出看一下就行
+在不使用-temp 输出的时候，并没有调用set
+
+在使用-temp的时候，才会调用set
