@@ -1,0 +1,2 @@
+不使用GOMAXPROCS设置CPU，默认有几个cpu就开启几个
+runtime.GOMAXPROCS为固定的cpu core数时，性能最理想
