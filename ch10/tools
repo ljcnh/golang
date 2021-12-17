@@ -1,0 +1,18 @@
+GOPATH:指定当前工作目录
+当需要切换到不同工作区的时候，只要更新GOPATH
+    get              download and install packages and dependencies
+    install          compile and install packages and dependencies
+
+GOPATH对应的工作区目录有三个子目录
+    src子目录用于存储源代码。每个包被保存在与$GOPATH/src的相对路径为包导入路径的子目录
+    pkg子目录用于保存编译后的包的目标文件
+    bin子目录用于保存编译后的可执行程序
+
+GOROOT 用来指定Go的安装目录 一般会默认配置
+
+
+内部包 Go语言的构建工具对包含internal名字的路径段的包导入路径做了特殊处理。这种包叫internal包，一个internal包只能被和internal目录有同一个父目录的包所导入
+
+
+compress子目录下所有包的依赖包列表: go list -f '{{.ImportPath}} -> {{join .Imports " "}}' compress/...
+
