@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e384459f-645f-44e2-84d8-8715ff25ce72" name="Changes" comment="第八章结束 &#10;ftp没写，又难有麻烦，有时间在说...">
+    <list default="true" id="e384459f-645f-44e2-84d8-8715ff25ce72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lj" beforeDir="false" afterPath="$PROJECT_DIR$/lj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,24 @@
       <recent name="D:\lj\golang\ch7" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build golang/ch9 (1)">
+  <component name="RunManager" selected="Go Build.go build golang/ch10">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="golang" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build golang/ch10" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golang" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="golang/ch10" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/ch10/cross.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build golang/ch7/practice (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="golang" />
       <working_directory value="$PROJECT_DIR$" />
@@ -102,15 +118,6 @@
       <package value="golang/ch9" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/ch9/trmp.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build golang/ch9" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="golang" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="golang/ch9" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/ch9/bank1.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build golang/ch9/practice (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -140,13 +147,22 @@
       <filePath value="$PROJECT_DIR$/ch9/practice/prac1.go" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="golang" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build golang/ch10" />
         <item itemvalue="Go Build.go build golang/ch9 (1)" />
         <item itemvalue="Go Build.go build golang/ch9/practice (1)" />
         <item itemvalue="Go Build.go build golang/ch9/practice (2)" />
         <item itemvalue="Go Build.go build golang/ch9/practice" />
-        <item itemvalue="Go Build.go build golang/ch9" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +189,8 @@
     <MESSAGE value="7.3及之前" />
     <MESSAGE value="第七章剩下的" />
     <MESSAGE value="第八章结束 &#10;ftp没写，又难有麻烦，有时间在说..." />
-    <option name="LAST_COMMIT_MESSAGE" value="第八章结束 &#10;ftp没写，又难有麻烦，有时间在说..." />
+    <MESSAGE value="第九章结束" />
+    <option name="LAST_COMMIT_MESSAGE" value="第九章结束" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
