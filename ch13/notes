@@ -1,0 +1,5 @@
+使用unsafe包来摆脱Go语言规则带来的限制,不应该轻易使用
+unsafe包被广泛地用于比较低级的包, 例如runtime、os、syscall还有net包等，因为它们需要和操作系统密切配合，但是对于普通的程序一般是不需要使用unsafe包的
+
+
+哈哈哈 谨慎使用reflect包和unsafe包可还行，不推荐！

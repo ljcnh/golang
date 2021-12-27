@@ -1,8 +1,9 @@
-package main
+package prac2
 
 import (
 	"bytes"
 	"fmt"
+	"reflect"
 )
 
 func main() {
@@ -15,13 +16,13 @@ func main() {
 	y.Add(42)
 	//fmt.Println(y.String()) // "{9 42}"
 	x.UnionWith(&y)
-	fmt.Println(x.String())
+	//fmt.Println(x.String())
 	//fmt.Println(x.Has(9), x.Has(123))
-	//c := &x
-	//fmt.Println(c, reflect.TypeOf(c)) // "{1 9 42 144}"
-	//fmt.Println(&x)                   // "{1 9 42 144}"
-	//fmt.Println(x.String())           // "{1 9 42 144}"
-	//fmt.Println(x)                    // "{[4398046511618 0 65536]}"
+	c := &x
+	fmt.Println(c, reflect.TypeOf(c)) // "{1 9 42 144}"
+	fmt.Println(&x)                   // "{1 9 42 144}"
+	fmt.Println(x.String())           // "{1 9 42 144}"
+	fmt.Println(x)                    // "{[4398046511618 0 65536]}"
 }
 
 type IntSet struct {
@@ -49,6 +50,21 @@ func (s *IntSet) UnionWith(t *IntSet) {
 			s.words = append(s.words, tword)
 		}
 	}
+}
+
+func (s *IntSet) GetWords() map[uint64]struct{} {
+	buf := make(map[uint64]struct{})
+	for i, word := range s.words {
+		if word == 0 {
+			continue
+		}
+		for j := 0; j < 64; j++ {
+			if word&(1<<uint(j)) != 0 {
+				buf[uint64(64*i+j)] = struct{}{}
+			}
+		}
+	}
+	return buf
 }
 
 func (s *IntSet) String() string {

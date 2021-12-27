@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e384459f-645f-44e2-84d8-8715ff25ce72" name="Changes" comment="">
+    <list default="true" id="e384459f-645f-44e2-84d8-8715ff25ce72" name="Changes" comment="第十章结束">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch6/intset/intset.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch6/intset/intset.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ch11/practice/prac2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -67,15 +69,19 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\lj\golang\ch11\practice\prac2" />
+      <recent name="D:\lj\golang\ch11\practice\prac1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\lj\golang\ch9\memo\memo4" />
-      <recent name="D:\lj\golang\ch9\memo\memo1" />
-      <recent name="D:\lj\golang\ch9\memo" />
-      <recent name="D:\lj\golang\ch8\practice\prac1" />
-      <recent name="D:\lj\golang\ch7" />
+      <recent name="D:\lj\golang\ch11" />
+      <recent name="D:\lj\golang\ch11\eval" />
+      <recent name="D:\lj\golang\ch11\storage" />
+      <recent name="D:\lj\golang\ch11\echo" />
+      <recent name="D:\lj\golang\ch11\word2" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build golang/ch10">
+  <component name="RunManager" selected="Go Build.go build golang/ch13 (2)">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="golang" />
       <working_directory value="$PROJECT_DIR$" />
@@ -84,13 +90,49 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build golang/ch10" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build golang/ch12 (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golang" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <package value="golang/ch10" />
+      <package value="golang/ch12" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/ch10/cross.go" />
+      <filePath value="$PROJECT_DIR$/ch12/methods.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build golang/ch12" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golang" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="golang/ch12" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/ch12/temp.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build golang/ch13 (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golang" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="golang/ch13" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/ch13/unsafeptr.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build golang/ch13 (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golang" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="golang/ch13" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/ch13/equal.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build golang/ch13" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golang" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="golang/ch13" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/ch13/temp.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build golang/ch7/practice (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
@@ -111,42 +153,6 @@
       <filePath value="$PROJECT_DIR$/ch8/practice/prac1/clockwall.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build golang/ch9 (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="golang" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="golang/ch9" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/ch9/trmp.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build golang/ch9/practice (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="golang" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="golang/ch9/practice" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/ch9/practice/prac5.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build golang/ch9/practice (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="golang" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="golang/ch9/practice" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/ch9/practice/prac4.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build golang/ch9/practice" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="golang" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="golang/ch9/practice" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/ch9/practice/prac1.go" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="golang" />
       <working_directory value="$PROJECT_DIR$" />
@@ -158,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build golang/ch10" />
-        <item itemvalue="Go Build.go build golang/ch9 (1)" />
-        <item itemvalue="Go Build.go build golang/ch9/practice (1)" />
-        <item itemvalue="Go Build.go build golang/ch9/practice (2)" />
-        <item itemvalue="Go Build.go build golang/ch9/practice" />
+        <item itemvalue="Go Build.go build golang/ch13 (2)" />
+        <item itemvalue="Go Build.go build golang/ch13 (1)" />
+        <item itemvalue="Go Build.go build golang/ch13" />
+        <item itemvalue="Go Build.go build golang/ch12 (3)" />
+        <item itemvalue="Go Build.go build golang/ch12" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +196,8 @@
     <MESSAGE value="第七章剩下的" />
     <MESSAGE value="第八章结束 &#10;ftp没写，又难有麻烦，有时间在说..." />
     <MESSAGE value="第九章结束" />
-    <option name="LAST_COMMIT_MESSAGE" value="第九章结束" />
+    <MESSAGE value="第十章结束" />
+    <option name="LAST_COMMIT_MESSAGE" value="第十章结束" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
